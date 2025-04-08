@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:id="@+id/llBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/ibtnEliminar"
+            android:layout_width="35sp"
+            android:layout_height="38dp"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:gravity="center_horizontal|center_vertical"
+            android:scaleX="1.40"
+            android:scaleY="1.40"
+            android:src="@drawable/borrar"
+            android:text=""
+            android:textSize="8sp" />
+
+
+        <LinearLayout
+            android:id="@+id/llBack2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tvDirOrigen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:height="27dp"
+                android:maxLines="1"
+                android:scrollbars="horizontal"
+                android:text="text1"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:width="100sp" />
+
+            <TextView
+                android:id="@+id/tvDirDestino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:height="27dp"
+                android:maxLines="1"
+                android:scrollbars="horizontal"
+                android:text="text2"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:width="100sp" />
+
+            <TextView
+                android:id="@+id/tvCantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:height="27dp"
+                android:maxLines="1"
+                android:scrollbars="horizontal"
+                android:text="text3"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:width="80sp" />
+
+            <TextView
+                android:id="@+id/tvDescUnidadMedida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:height="27dp"
+                android:maxLines="1"
+                android:scrollbars="horizontal"
+                android:text="text3"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:width="130sp" />
+
+
+            <TextView
+                android:id="@+id/tvCodArticulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:height="27dp"
+                android:maxLines="1"
+                android:scrollbars="horizontal"
+                android:text="text3"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:width="90sp" />
+
+            <TextView
+                android:id="@+id/tvDescArticulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:height="27dp"
+                android:maxLines="1"
+                android:scrollbars="horizontal"
+                android:text="text3"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:width="200sp" />
+
+
+            <!--  	<CheckBox  -->
+            <!--  	    android:id="@+id/cbConfirmado" -->
+            <!--  	    android:layout_width="fill_parent" -->
+            <!--  	    android:layout_height="wrap_content" />  -->
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

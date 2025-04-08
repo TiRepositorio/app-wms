@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/back_dialog"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tvTituloDireccion"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|center_vertical"
+                android:text="CANTIDAD A TRANSFERIR"
+                android:textColor="#ffffff"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/btn_volver"
+                android:layout_width="40sp"
+                android:layout_height="30sp"
+                android:background="@color/translucent_red"
+                android:text="X" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvCantidadDisp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.62"
+            android:text="TextView"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        <Spinner
+            android:id="@+id/spDirecciones"
+            style="@android:style/Widget.Holo.Spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/spinner_normal"
+            android:spinnerMode="dropdown"
+            android:textSize="7pt" />
+
+        <EditText
+            android:id="@+id/etCodigoBarra"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="number"
+            android:text="0"
+            android:textColor="#ffffff" />
+
+        <requestFocus />
+
+        <Button
+            android:id="@+id/btnAceptar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Aceptar" />
+    </LinearLayout>
+
+</RelativeLayout>

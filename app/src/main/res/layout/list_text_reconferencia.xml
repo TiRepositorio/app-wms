@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+
+    <TextView
+        android:layout_width="60sp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5sp"
+        android:paddingTop="3sp"
+        android:paddingBottom="3sp"
+        android:id="@+id/tv1"
+        android:maxLines="1"
+        android:gravity="center_vertical|left"
+        android:scrollbars="horizontal"
+        android:text="text1"
+        android:textColor="#fffafa"
+        android:textSize="12sp" />
+
+
+    <TextView
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5sp"
+        android:paddingTop="3sp"
+        android:paddingBottom="3sp"
+        android:id="@+id/tv2"
+        android:maxLines="1"
+        android:gravity="center_vertical|left"
+        android:scrollbars="horizontal"
+        android:text="text1"
+        android:textColor="#fffafa"
+        android:textSize="12sp" />
+
+
+
+
+    <TextView
+        android:layout_width="80sp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5sp"
+        android:paddingTop="3sp"
+        android:paddingBottom="3sp"
+        android:id="@+id/tv3"
+        android:maxLines="1"
+        android:gravity="center_vertical|left"
+        android:scrollbars="horizontal"
+        android:text="text1"
+        android:textColor="#fffafa"
+        android:textSize="12sp" />
+
+
+
+
+</LinearLayout>

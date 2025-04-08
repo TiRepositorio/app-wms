@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvJaula"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jaula: " />
+
+
+                <!-- <Spinner -->
+                <!-- android:id="@+id/spDeposito" -->
+                <!-- style="@android:style/Widget.Holo.Spinner" -->
+                <!-- android:layout_width="fill_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_margin="3dp" -->
+                <!-- android:background="@drawable/spinner_normal" -->
+                <!-- android:spinnerMode="dropdown" -->
+                <!-- android:textSize="7pt" /> -->
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ingrese el código de la Mercadería" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/border_bold"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/etDestino"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:descendantFocusability="blocksDescendants"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:inputType="phone" />
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/etDesvioFocus"
+                    android:layout_width="0sp"
+                    android:layout_height="0sp" />
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Descripción:" />
+
+                <TextView
+                    android:id="@+id/tvDescArticulo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#000000" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/spinner_normal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tvNorma"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center_horizontal"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:textStyle="bold|italic" />
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Vencimiento" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal" >
+
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/border_bold"
+                        android:orientation="horizontal" >
+
+                        <EditText
+                            android:id="@+id/etVencimiento"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:descendantFocusability="blocksDescendants"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:enabled="false"
+                            android:inputType="number" />
+
+                    </LinearLayout>
+
+                    <Spinner
+                        android:id="@+id/spVencimiento"
+                        style="@style/spinner_style"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:padding="0dp"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_normal2"
+                        android:spinnerMode="dropdown"
+                        android:textSize="10pt" />
+
+                    <!--                 	style="@android:style/Widget.Holo.Spinner" -->
+                    <!-- 	                android:background="@drawable/spinner_normal" -->
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="2dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="right|center_vertical"
+                            android:text="Saldo Disponible:" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="2dp"
+                        android:orientation="horizontal" >
+
+                        <EditText
+                            android:id="@+id/etSaldoDisponible"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:descendantFocusability="blocksDescendants"
+                            android:background="@drawable/spinner_normal"
+                            android:gravity="right"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false" />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Unidad de Medida" />
+
+                <Spinner
+                    android:id="@+id/spDirecciones"
+                    style="@android:style/Widget.Holo.Spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="0dp"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/spinner_normal2"
+                    android:spinnerMode="dropdown"
+                    android:textSize="7pt" />
+
+                <!--                 <TextView -->
+                <!--                     android:layout_width="fill_parent" -->
+                <!--                     android:layout_height="wrap_content" -->
+                <!--                     android:text="Anomalías " /> -->
+
+                <Spinner
+                    android:id="@+id/spAnomalias"
+                    style="@android:style/Widget.Holo.Spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/spinner_normal"
+                    android:spinnerMode="dropdown"
+                    android:visibility="gone"
+                    android:textSize="7pt" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ingrese la cantidad" />
+
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/border_bold"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/etCantidad"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:descendantFocusability="blocksDescendants"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true" />
+                </LinearLayout>
+
+
+                <!-- <TextView -->
+                <!-- android:layout_width="fill_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:text="Lote" /> -->
+
+                <EditText
+                    android:id="@+id/etLote"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:maxLines="1" />
+
+                <!--                 <TextView -->
+                <!--                     android:layout_width="fill_parent" -->
+                <!--                     android:layout_height="wrap_content" -->
+                <!--                     android:text="Vencimiento" /> -->
+
+                <!--                 <EditText -->
+                <!--                     android:id="@+id/etVencimiento" -->
+                <!--                     android:layout_width="fill_parent" -->
+                <!--                     android:layout_height="wrap_content" -->
+                <!--                     android:inputType="number"                     -->
+                <!--     				android:descendantFocusability="blocksDescendants" -->
+                <!-- 		            android:focusable="true" -->
+                <!-- 		            android:focusableInTouchMode="true" /> -->
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dirección" />
+                <TextView
+                    android:id="@+id/tvDireccion"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+                <TextView
+                    android:id="@+id/tvDireccion2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btnConfirmar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Conferir Articulo" />
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancelar" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

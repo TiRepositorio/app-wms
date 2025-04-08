@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Ingrese el número  "
+                android:textColor="#ffffff"
+                android:maxLines="1"
+                android:id="@+id/etBuscador"/>
+
+            <ImageButton
+                android:id="@+id/ibtnBuscarPlanilla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lupa"/>
+
+        </LinearLayout>
+
+
+        <HorizontalScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="4dip"
+            android:layout_marginRight="1dip"
+            android:layout_marginTop="2dip"
+            android:layout_weight="1"
+            android:clipToPadding="true"
+            android:overScrollMode="never" >
+
+            <TableLayout
+                android:id="@+id/amortization"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TableRow android:background="#008000" >
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:ellipsize="end"
+                        android:gravity="left|center_vertical"
+                        android:maxLines="1"
+                        android:scrollbars="horizontal"
+                        android:text="Nro."
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:width="210sp" />
+
+                    <TextView
+                        android:id="@+id/t2"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="left|center_vertical"
+                        android:maxLines="1"
+                        android:scrollbars="horizontal"
+                        android:text="Fecha"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:width="210sp" />
+
+                    <TextView
+                        android:id="@+id/t3"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="left|center_vertical"
+                        android:maxLines="1"
+                        android:scrollbars="horizontal"
+                        android:text="Jaula"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:width="210sp" />
+
+                    <TextView
+                        android:id="@+id/t4"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:maxLines="1"
+                        android:scrollbars="horizontal"
+                        android:text="Usuario Alta"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:width="210sp" />
+
+                </TableRow>
+
+                ListView
+                    android:id="@+id/lvPlanillaInv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:paddingTop="1dip"
+                    android:scrollbars="none" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPlanillaInv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="1dp"/>
+
+
+
+            </TableLayout>
+        </HorizontalScrollView>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar"
+            android:id="@+id/btnSeleccionar"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

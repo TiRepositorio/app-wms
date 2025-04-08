@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:background="@drawable/border_bold"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/etCodigoBarraList"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:descendantFocusability="blocksDescendants"
+                android:inputType="" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/etBuscarArticulo"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:descendantFocusability="blocksDescendants"
+                android:hint="Buscar por articulo"
+                android:focusableInTouchMode="true"
+                android:inputType="number" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/btCancelarBusqueda"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:textSize="10dp"
+                android:text="X" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etDesvioFocusList"
+            android:layout_width="0sp"
+            android:layout_height="0sp" />
+
+
+
+
+
+
+
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="4dip"
+            android:layout_marginRight="1dip"
+            android:layout_marginTop="2dip"
+            android:layout_weight="1"
+            android:clipToPadding="true"
+            android:overScrollMode="never" >
+
+            <TableLayout
+                android:id="@+id/amortization"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TableRow android:background="#008000" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:scrollbars="horizontal"
+                        android:text="     Dir. Origen"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:width="135sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:scrollbars="horizontal"
+                        android:text="Dir. Destino"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:width="100sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:scrollbars="horizontal"
+                        android:text="Cantidad"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:width="80sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:ellipsize="end"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:scrollbars="horizontal"
+                        android:text="UM"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:width="130sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:scrollbars="horizontal"
+                        android:text="Articulo"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:width="90sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center|center_vertical"
+                        android:maxLines="1"
+                        android:scrollbars="horizontal"
+                        android:text="Descripción"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:width="200sp" />
+
+
+                </TableRow>
+
+                ListView
+                android:id="@+id/lvTransferencias"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:paddingTop="1dip"
+                android:scrollbars="none" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTransferencias"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="1dp"/>
+
+            </TableLayout>
+        </HorizontalScrollView>
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnVolver"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Volver" />
+            <Button
+                android:id="@+id/btnCancelarList"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancelar" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

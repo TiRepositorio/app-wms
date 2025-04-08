@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/etCodigoArticuloSugerencia"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Código de Barra"
+            android:inputType="phone"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <EditText
+            android:id="@+id/etDesvioFocus"
+            android:layout_width="0sp"
+            android:layout_height="0sp" />
+
+        <HorizontalScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="350dp"
+            android:layout_marginLeft="4dip"
+            android:layout_marginRight="1dip"
+            android:layout_marginTop="2dip"
+            android:clipToPadding="true"
+            android:overScrollMode="never" >
+
+            <TableLayout
+                android:id="@+id/amortization"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+                <TableRow android:background="#008000">
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="200dp"
+                        android:layout_height="fill_parent"
+                        android:ellipsize="end"
+                        android:gravity="left|center_vertical"
+                        android:maxLines="1"
+                        android:scrollbars="horizontal"
+                        android:text="Direcciones"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:width="120sp" />
+                    <TextView
+                        android:id="@+id/t2"
+                        android:layout_width="100dp"
+                        android:layout_height="fill_parent"
+                        android:ellipsize="end"
+                        android:gravity="left|center_vertical"
+                        android:maxLines="1"
+                        android:scrollbars="horizontal"
+                        android:text="Cantidad UB."
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:width="120sp" />
+
+
+
+                </TableRow>
+
+                ListView
+                    android:id="@+id/lvSugerenciaPulmon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:paddingTop="1dip"
+                    android:scrollbars="none" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvSugerenciaPulmon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"/>
+
+
+            </TableLayout>
+        </HorizontalScrollView>
+
+        <Button
+            android:id="@+id/btnCerrarSugerencias"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Cerrar" />
+
+    </LinearLayout>
+
+</RelativeLayout>

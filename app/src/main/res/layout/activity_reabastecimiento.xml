@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:padding="40sp"
+        android:orientation="vertical" >
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="40sp"
+            android:id="@+id/btnReabastecimientoVertical"
+            android:text="Movimiento Vertical" />
+
+        
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50sp"/>
+
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="40sp"
+            android:id="@+id/btnReabastecimientoHorizontal"
+            android:text="Movimiento Horizontal" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

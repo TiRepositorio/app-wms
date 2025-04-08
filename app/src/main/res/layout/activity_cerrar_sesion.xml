@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="wms.pruebas.CerrarSesion" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/etUsuarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="USUARIO" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/btnCerrarSesion"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Cerrar Sesion" />
+
+        <Button
+            android:id="@+id/btnConsultar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Consultar" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#008000" >
+
+                    <TextView
+                        android:id="@+id/tvUsuario"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Usuario"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvIP"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Dirección IP"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvEstado"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Estado"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvVersion"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Versión"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvDispositivo"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="Nro - Dispositivo"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvInicio"
+                        android:layout_width="165dp"
+                        android:layout_height="wrap_content"
+                        android:text="Inicio"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvCierre"
+                        android:layout_width="165dp"
+                        android:layout_height="wrap_content"
+                        android:text="Cierre"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                ListView
+                    android:id="@+id/lvUsuarios"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvUsuarios"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"/>
+
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

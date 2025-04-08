@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:scaleType="fitCenter"
+        android:layout_margin="5sp"
+        android:id="@+id/ivOperacion"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#fffafa"
+        android:layout_weight="1"
+        android:layout_margin="5sp"
+        android:textSize="20sp"
+        android:gravity="center_vertical|center_horizontal"
+        android:id="@+id/tvDescOperacion"/>
+
+</LinearLayout>

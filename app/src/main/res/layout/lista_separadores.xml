@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/etBuscar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Buscar"
+            android:inputType="none" />
+
+        <HorizontalScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="350dp"
+            android:layout_marginLeft="4dip"
+            android:layout_marginRight="1dip"
+            android:layout_marginTop="2dip"
+            android:clipToPadding="true"
+            android:overScrollMode="never" >
+
+            <TableLayout
+                android:id="@+id/amortization"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+                <TableRow android:background="#008000">
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="80dp"
+                        android:layout_height="fill_parent"
+                        android:ellipsize="end"
+                        android:gravity="left|center_vertical"
+                        android:maxLines="1"
+                        android:scrollbars="horizontal"
+                        android:text="Cod. Sep."
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:width="120sp" />
+                    <TextView
+                        android:id="@+id/t2"
+                        android:layout_width="230dp"
+                        android:layout_height="fill_parent"
+                        android:ellipsize="end"
+                        android:gravity="left|center_vertical"
+                        android:maxLines="1"
+                        android:scrollbars="horizontal"
+                        android:text="Nombre y Apellido"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:width="120sp" />
+
+
+
+                </TableRow>
+
+                ListView
+                    android:id="@+id/lvSeparadores"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:paddingTop="1dip"
+                    android:scrollbars="none" >
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvSeparadores"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="1dp"/>
+
+            </TableLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnConfirmarSeparador"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Confirmar" />
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancelar" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

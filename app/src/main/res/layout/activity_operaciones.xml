@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF" >
+
+    <TextView
+        android:id="@+id/tvEmpresa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccione una empresa para continuar"
+        android:textStyle="italic"
+        android:textSize="12dp"
+        android:paddingLeft = "10dp"
+        android:paddingRight= "10dp"
+        android:gravity="center|center_vertical"
+        android:textColor="#000000"/>
+
+    <ListView
+        android:id="@+id/lvOperaciones"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10sp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="5dp"
+        android:paddingTop="1dip"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/etAccion"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:inputType="text"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/btnCerrarSesion"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/SingleGradient"
+            android:text="CERRAR SESION" />
+    </LinearLayout>
+
+</LinearLayout>
+

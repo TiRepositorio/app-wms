@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:id="@+id/llBack"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="horizontal" >
+
+
+
+        <TextView
+            android:id="@+id/tvNroOrden_018"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:ellipsize="end"
+            android:gravity="center_vertical|center_horizontal"
+            android:height="30dp"
+            android:maxLines="1"
+            android:scrollbars="horizontal"
+            android:text="ser"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:width="40dip" />
+
+        <TextView
+            android:id="@+id/tvCodArticulo_018"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:ellipsize="end"
+            android:gravity="center_vertical|center_horizontal"
+            android:height="30dp"
+            android:maxLines="1"
+            android:scrollbars="horizontal"
+            android:text="ser"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:width="100dip" />
+
+
+        <TextView
+            android:id="@+id/tvDescArticulo_018"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:height="30dp"
+            android:maxLines="1"
+            android:scrollbars="horizontal"
+            android:text="nro"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:width="250dp" />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

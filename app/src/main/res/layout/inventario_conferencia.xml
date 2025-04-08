@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <!--         <ScrollView -->
+        <!--             android:layout_width="fill_parent" -->
+        <!--             android:layout_height="fill_parent" -->
+        <!--             android:layout_weight="1" > -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+                <!-- android:background="@color/common_action_bar_splitter" -->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:background="#999999" >
+                <!-- android:background="@color/common_action_bar_splitter" -->
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Direccion"
+                    android:textColor="#000000"/>
+
+                <EditText
+                    android:id="@+id/etCodDireccion"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="4sp"
+                    android:background="@drawable/normal_edittext"
+                    android:descendantFocusability="blocksDescendants"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etDesvioFocus1"
+                android:layout_width="0sp"
+                android:layout_height="0sp" />
+
+            <!--                 <TextView -->
+            <!--                     android:id="@+id/tvDescripcionTitulo" -->
+            <!--                     android:layout_width="fill_parent" -->
+            <!--                     android:layout_height="wrap_content" -->
+            <!--                     android:text="Descripcion:" /> -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+
+                android:layout_height="100dp"
+                android:layout_margin="2dp"
+                android:orientation="vertical" >
+                <!--                     android:layout_height="fill_parent" -->
+                <!--                //////////////////////////////////////////////// -->
+
+
+
+                <HorizontalScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="4dip"
+                    android:layout_marginRight="1dip"
+                    android:layout_marginTop="2dip"
+                    android:layout_weight="0.08"
+                    android:clipToPadding="true"
+                    android:overScrollMode="never" >
+
+                    <TableLayout
+                        android:id="@+id/detalle_pedido"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <!-- BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB -->
+                        <TableRow
+                            android:id="@+id/table1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#008000">
+
+
+
+                            <TextView
+                                android:id="@+id/lblNroOrden"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:ellipsize="end"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:maxLines="1"
+                                android:scrollbars="horizontal"
+                                android:text="Nro"
+                                android:textColor="#000000"
+                                android:textSize="15sp"
+                                android:width="40sp" />
+
+                            <!-- 								<TextView -->
+                            <!--                                     android:id="@+id/lblCodArticulo" -->
+                            <!--                                     android:layout_width="wrap_content" -->
+                            <!--                                     android:layout_height="wrap_content" -->
+                            <!--                                     android:layout_alignParentBottom="true" -->
+                            <!--                                     android:ellipsize="end" -->
+                            <!--                                     android:gravity="center_horizontal|center_vertical" -->
+                            <!--                                     android:maxLines="1" -->
+                            <!--                                     android:scrollbars="horizontal" -->
+                            <!--                                     android:text="" -->
+                            <!--                                     android:textColor="#000000" -->
+                            <!--                                     android:textSize="15sp" -->
+                            <!--                                     android:width="100sp" /> -->
+
+
+                            <TextView
+                                android:id="@+id/lblDesArticulo_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:ellipsize="end"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:maxLines="1"
+                                android:scrollbars="horizontal"
+                                android:text="Artículo"
+                                android:textColor="#000000"
+                                android:textSize="15sp"
+                                android:width="350sp" />
+
+                        </TableRow>
+
+                        ListView
+                            android:id="@+id/lvInventario_det"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@null"
+                            android:dividerHeight="0dp"
+                            android:paddingTop="1dip"
+                            android:scrollbars="none" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvInventarioDet"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="5dp"/>
+
+                    </TableLayout>
+                </HorizontalScrollView>
+
+
+                <!--                     //////////////////////////////////////////////// -->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+
+
+
+
+
+
+                <!-- android:background="@color/common_action_bar_splitter" -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:background="#999999" >
+
+                    <!--                     <TextView -->
+                    <!-- 	                    android:layout_width="130dp" -->
+                    <!-- 	                    android:layout_height="wrap_content" -->
+                    <!-- 	                    android:text="Cod. Artículo:" /> -->
+
+                    <EditText
+                        android:id="@+id/etDescSeleccionado"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginLeft="4sp"
+                        android:layout_marginRight="4sp"
+                        android:background="@drawable/normal_edittext"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:inputType="phone"
+                        android:text=""
+                        android:textColor="@color/pink_light" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_weight="1"
+                    android:background="#999999"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+                <!-- android:background="@color/common_action_bar_splitter" -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="#999999" >
+                    <!-- android:background="@color/common_action_bar_splitter" -->
+
+                    <TextView
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:text="Cod. Artículo:"
+                        android:textColor="#000000"/>
+
+                    <EditText
+                        android:id="@+id/etCodArticulo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:descendantFocusability="blocksDescendants"
+                        android:background="@drawable/normal_edittext"
+                        android:layout_marginRight="4sp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true" />
+                    android:background="@drawable/normal_edittext"
+
+                </LinearLayout>
+
+
+
+
+                <EditText
+                    android:id="@+id/etDesvioFocus2"
+                    android:layout_width="0sp"
+                    android:layout_height="0sp" />
+                <TextView
+                    android:id="@+id/tvDescripcionTitulo_2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/normal_edittext"
+                    android:text="Descripcion:"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/tvDescArticulo_2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/normal_edittext"
+                    android:text=""
+                    android:textColor="#000000" />
+
+
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:background="#999999"
+                    android:gravity="center_vertical">
+                    <!-- android:background="@color/common_action_bar_splitter" -->
+
+                    <TextView
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Unidad de Medida:"
+                        android:textColor="#000000" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal" >
+
+                        <Spinner
+                            android:id="@+id/spDirecciones"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="3dp"
+                            android:padding="0dp"
+                            android:background="@drawable/spinner_normal"
+                            android:spinnerMode="dropdown"
+                            android:textSize="7pt" />
+                        style="@android:style/Widget.Holo.Spinner"
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:background="#999999" >
+                    <!-- android:background="@color/common_action_bar_splitter" -->
+
+                    <TextView
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Ingrese la cantidad:"
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:id="@+id/etCantidad"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="4sp"
+                        android:descendantFocusability="blocksDescendants"
+                        android:background="@drawable/normal_edittext"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:inputType="number" />
+                    android:background="@drawable/normal_edittext"
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:background="#999999" >
+                    <!-- android:background="@color/common_action_bar_splitter" -->
+
+                    <TextView
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Vencimiento:"
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:id="@+id/etVencimiento"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="4sp"
+                        android:descendantFocusability="blocksDescendants"
+                        android:background="@drawable/normal_edittext"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:inputType="number" />
+                    android:background="@drawable/normal_edittext"
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btnConfirmar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Conferir Articulo" />
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancelar" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

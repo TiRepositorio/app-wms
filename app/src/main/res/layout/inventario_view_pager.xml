@@ -1,0 +1,138 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:id="@+id/llTabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:background="#0C2020">
+
+            <TextView
+                android:id="@+id/tabConferencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CONFERENCIA"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:onClick="mostrarContenido"
+                style="@style/tituloTab"/>
+            <TextView
+                android:id="@+id/tabConferido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CONFERIDOS"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:onClick="mostrarContenido"
+                style="@style/tituloTab"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llLineaTabs"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lTabConferencia"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_weight="1"
+                android:onClick="mostrarContenido"
+                android:enabled="false"
+                style="@style/tituloTab"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/lTabConferidos"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_weight="1"
+                android:onClick="mostrarContenido"
+                android:enabled="false"
+                style="@style/tituloTab"
+                tools:ignore="HardcodedText" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvNroInventario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nro. Inv.:" />
+
+            <TextView
+                android:id="@+id/tvNroComprobante"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/ibtnBuscarPlanilla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lupa"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutInventarioConferencia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/inventario_conferencia"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutInventarioConferido"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/inventario_conferido"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+

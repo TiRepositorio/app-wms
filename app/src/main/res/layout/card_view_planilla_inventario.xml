@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:id="@+id/llBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/back">
+
+        <TextView
+            android:id="@+id/tvNroComprobante"
+            android:layout_width="60sp"
+            android:layout_height="40sp"
+            android:gravity="center_vertical|left"
+            android:maxLines="1"
+            android:background="@drawable/border_textview"
+            android:paddingLeft="5sp"
+            android:text="Cod Sucursal"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/tvFecInventario"
+            android:layout_width="150sp"
+            android:layout_height="40sp"
+            android:gravity="center_vertical|left"
+            android:maxLines="1"
+            android:background="@drawable/border_textview"
+            android:paddingLeft="5sp"
+            android:text="Desc Sucursal"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/tvUsuarioAlta"
+            android:layout_width="120sp"
+            android:layout_height="40sp"
+            android:gravity="center_vertical|left"
+            android:maxLines="1"
+            android:background="@drawable/border_textview"
+            android:paddingLeft="5sp"
+            android:text="Cod Deposito"
+            android:textColor="#000000" />
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,91 @@
+package com.apolo.wms.operaciones.fraccionado.adapter
+
+import android.content.Context
+import android.graphics.Color
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import com.apolo.wms.clases.fraccionado.PlanillaFraccionado
+import com.apolo.wms.operaciones.fraccionado.ConsultaJaula
+import com.apolo.wms2.R
+
+class AdapterPlanillaFraccionado  (private val context: Context,
+                                   private val dataSource: List<PlanillaFraccionado>,
+                                   private val molde: Int ) : RecyclerView.Adapter<AdapterPlanillaFraccionado.ViewHolder>() {
+
+
+    // create new views
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        // inflates the card_view_design view
+        // that is used to hold list item
+        val view = LayoutInflater.from(context)
+            .inflate(molde, parent, false)
+
+        return ViewHolder(view)
+
+
+    }
+
+    // binds the list items to a view
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
+        val ItemsViewModel = dataSource[position]
+
+        // sets the image to the imageview from our itemHolder class
+        //holder.imageView.setImageResource(ItemsViewModel.image)
+
+        // sets the text to the textview from our itemHolder class
+        //holder.textView.text = ItemsViewModel.text
+
+        holder.tvPlanilla.text = ItemsViewModel.nroPlanilla
+        holder.tvCodigoBarra.text = ItemsViewModel.codBarraVol
+        holder.tvJaula.text = ""
+        holder.tvEstado.text = ItemsViewModel.estado
+        holder.tvNumero.text = "${ItemsViewModel.nroVolumen}/${ItemsViewModel.cantidadVolumenes}"
+        holder.tvCliente.text = "${ItemsViewModel.descripcion}-${ItemsViewModel.codCliente}-${ItemsViewModel.codSubcliente}"
+
+
+        holder.llback.setOnClickListener {
+            ConsultaJaula.posicionPlanilla = position
+            this.notifyDataSetChanged()
+        }
+
+
+
+        if (position%2==0){
+            holder.llback.setBackgroundColor(Color.parseColor("#EEEEEE"))
+        } else {
+            holder.llback.setBackgroundColor(Color.parseColor("#CCCCCC"))
+        }
+
+        if (ConsultaJaula.posicionPlanilla == position) {
+            holder.llback.setBackgroundColor(Color.BLUE)
+        }
+
+    }
+
+    // return the number of the items in the list
+    override fun getItemCount(): Int {
+        return dataSource.size
+    }
+
+    // Holds the views for adding it to image and text
+    class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
+        //val imageView: ImageView = itemView.findViewById(R.id.imageview)
+        //val textView: TextView = itemView.findViewById(R.id.textView)
+        val llback: LinearLayout = itemView.findViewById(R.id.llBack)
+        val tvPlanilla: TextView = itemView.findViewById(R.id.tvPlanilla)
+        val tvCodigoBarra: TextView = itemView.findViewById(R.id.tvCodigoBarra)
+        val tvJaula: TextView = itemView.findViewById(R.id.tvJaula)
+        val tvEstado: TextView = itemView.findViewById(R.id.tvEstado)
+        val tvNumero: TextView = itemView.findViewById(R.id.tvNumero)
+        val tvCliente: TextView = itemView.findViewById(R.id.tvCliente)
+
+
+    }
+
+
+}

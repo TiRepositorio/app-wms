@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="222dp"
+            android:layout_marginLeft="4dip"
+            android:layout_marginRight="1dip"
+            android:layout_marginTop="2dip"
+            android:clipToPadding="true"
+            android:overScrollMode="never" >
+
+            <TableLayout
+                android:id="@+id/amortization"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TableRow android:background="#008000" >
+
+                    <!--                     <TextView -->
+                    <!--                         android:id="@+id/t1" -->
+                    <!--                         android:layout_width="wrap_content" -->
+                    <!--                         android:layout_height="25dp" -->
+                    <!--                         android:ellipsize="end" -->
+                    <!--                         android:gravity="left|center_vertical" -->
+                    <!--                         android:maxLines="1" -->
+                    <!--                         android:layout_marginLeft="20sp" -->
+                    <!--                         android:scrollbars="horizontal" -->
+                    <!--                         android:text="Cod. Motivo" -->
+                    <!--                         android:textColor="#000000" -->
+                    <!--                         android:textSize="15sp" -->
+                    <!--                         android:width="210sp" /> -->
+
+                    <TextView
+                        android:id="@+id/t2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="left|center_vertical"
+                        android:maxLines="1"
+                        android:scrollbars="horizontal"
+                        android:text="Descripcion"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:width="120sp" />
+
+                    <!--                     <TextView -->
+                    <!--                         android:id="@+id/t3" -->
+                    <!--                         android:layout_width="wrap_content" -->
+                    <!--                         android:layout_height="wrap_content" -->
+                    <!--                         android:ellipsize="end" -->
+                    <!--                         android:paddingRight="5sp" -->
+                    <!--                         android:gravity="right|center_vertical" -->
+                    <!--                         android:maxLines="1" -->
+                    <!--                         android:scrollbars="horizontal" -->
+                    <!--                         android:text="Cantidad" -->
+                    <!--                         android:textColor="#000000" -->
+                    <!--                         android:textSize="15sp" -->
+                    <!--                         android:width="80sp" /> -->
+
+                    <!--                     <TextView -->
+                    <!--                         android:id="@+id/t4" -->
+                    <!--                         android:layout_width="wrap_content" -->
+                    <!--                         android:layout_height="wrap_content" -->
+                    <!--                         android:ellipsize="end" -->
+                    <!--                         android:paddingRight="5sp" -->
+                    <!--                         android:gravity="right|center_vertical" -->
+                    <!--                         android:maxLines="1" -->
+                    <!--                         android:scrollbars="horizontal" -->
+                    <!--                         android:text="Anomalia" -->
+                    <!--                         android:textColor="#000000" -->
+                    <!--                         android:textSize="15sp" -->
+                    <!--                         android:width="80sp" /> -->
+
+                </TableRow>
+
+                <ListView
+                    android:id="@+id/lvAnomaliasArticulo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="184dp"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:paddingTop="1dip"
+                    android:scrollbars="none" />
+            </TableLayout>
+        </HorizontalScrollView>
+
+
+        <Button
+            android:id="@+id/btnAcetarAnomalias"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Aceptar"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

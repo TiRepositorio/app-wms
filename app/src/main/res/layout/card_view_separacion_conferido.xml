@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="1dp">
+
+
+    <LinearLayout
+        android:id="@+id/llBack"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/ibtnEliminar"
+            android:layout_width="35sp"
+            android:layout_height="38dp"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:gravity="center_horizontal|center_vertical"
+            android:scaleX="1.40"
+            android:scaleY="1.40"
+            android:src="@drawable/borrar"
+            android:text=""
+            android:textSize="8sp" />
+
+        <LinearLayout
+            android:id="@+id/llBack2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+
+            <TextView
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5sp"
+                android:paddingTop="3sp"
+                android:paddingBottom="3sp"
+                android:id="@+id/tvPaletNro"
+                android:maxLines="1"
+                android:gravity="center_vertical|left"
+                android:scrollbars="horizontal"
+                android:text="text1"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+            <TextView
+                android:layout_width="260sp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5sp"
+                android:paddingTop="3sp"
+                android:paddingBottom="3sp"
+                android:id="@+id/tvDescArticulo"
+                android:maxLines="1"
+                android:gravity="center_vertical|left"
+                android:scrollbars="horizontal"
+                android:text="text1"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5sp"
+                android:paddingTop="3sp"
+                android:paddingBottom="3sp"
+                android:id="@+id/tvReferencia"
+                android:maxLines="1"
+                android:gravity="center_vertical|left"
+                android:scrollbars="horizontal"
+                android:text="text1"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+
+
+            <TextView
+                android:layout_width="80sp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5sp"
+                android:paddingTop="3sp"
+                android:paddingBottom="3sp"
+                android:id="@+id/tvCantidadDisp"
+                android:maxLines="1"
+                android:gravity="center_vertical|left"
+                android:scrollbars="horizontal"
+                android:text="text1"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>
