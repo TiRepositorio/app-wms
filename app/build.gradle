@@ -9,14 +9,14 @@ android {
     compileSdk 31
     buildToolsVersion "30.0.3"
 
-    signingConfigs {
+    /*signingConfigs {
         debug {
-            storeFile file('C:\\Android\\Keystore\\WMS\\wms.keystore')
+            storeFile file('C:\\Desarrollo\\android\\Keystore\\WMS\\wms.keystore')
             storePassword 'apolo2020'
             keyAlias 'key0'
             keyPassword 'apolo2020'
         }
-    }
+    }*/
 
     defaultConfig {
         applicationId "com.apolo.wms2"

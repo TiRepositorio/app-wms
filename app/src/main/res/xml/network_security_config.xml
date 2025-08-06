@@ -2,6 +2,6 @@
 <network-security-config>
     <domain-config cleartextTrafficPermitted="true">
 <!--        <domain includeSubdomains="true">10.1.1.115</domain> &lt;!&ndash; the domain you are using for api network call &ndash;&gt;-->
-        <domain includeSubdomains="true">192.168.0.18</domain> <!-- the domain you are using for api network call -->
+        <domain includeSubdomains="true">10.1.1.115</domain> <!-- the domain you are using for api network call -->
     </domain-config>
 </network-security-config>

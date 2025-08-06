@@ -103,8 +103,8 @@ class MainActivity : AppCompatActivity() {
 
         lateinit var usuarioLogin : UsuarioLogin
 
-        const val _version : String = "53"
-        const val _fechaVersion : String = "20240319"
+        const val _version : String = "54"
+        const val _fechaVersion : String = "20250805"
         const val _versionDelDia : String = "1"
 
         var lote_defecto = "0"
@@ -281,12 +281,15 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
                     metodo = "login/verificar_dispositivo"
                     formBody = FormBody.Builder()
                         .add("USER", user)
                         .add("PASS", pass)
+                        //.add("IMEI", "356074080243319"/*idTelefono*/)
+                        //.add("IP", "192.168.20.250"/*funciones.getIP()*/)
                         .add("IMEI", idTelefono)
-                        .add("IP", funciones.getIP())
+                        .add("IP", funciones.getIP().toString())
                         .add("VERSION", "v.$_version.$_fechaVersion")
                         .build()
                     respuesta = HttpRequest.call("", metodo, formBody).toString()
